@@ -32,3 +32,7 @@ conda create -n yolov8 python=3.10
 conda activate yolov8
 pip install ultralytics
 ```
+4. Train 
+'''sh
+!yolo task=detect mode=predict model= conf=0.25 source=<Your_data>  save=True
+'''
