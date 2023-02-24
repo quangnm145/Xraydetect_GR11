@@ -59,8 +59,9 @@ print(HOME)
 %cd {HOME}
 !yolo task=detect mode=predict model=yolov8n.pt conf=0.25 source='https://media.roboflow.com/notebooks/examples/dog.jpeg' save=True
 ```
-If you succeed the result will show
-![''](images/pre-train.png)
+If you succeed the result will show:
+ 
+![''](images/pre-train.PNG)
  
 5. Train: 
 ```sh
@@ -80,6 +81,40 @@ Image(filename=f'{HOME}/runs/detect/train/results.png', width=600)
 %cd {HOME}
 Image(filename=f'{HOME}/runs/detect/train/val_batch0_pred.jpg', width=600)
 ```
+7. Validate Model
+```sh
+%cd {HOME}
+!yolo task=detect mode=val model={HOME}/runs/detect/train/weights/best.pt data={dataset.location}/data.yaml
+```  
+```sh
+/content
+Ultralytics YOLOv8.0.9 🚀 Python-3.8.10 torch-1.13.1+cu116 CUDA:0 (Tesla T4, 15110MiB)
+Fusing layers... 
+Model summary: 168 layers, 11127132 parameters, 0 gradients, 28.4 GFLOPs
+val: Scanning /content/datasets/football-players-detection-1/valid/labels.cache... 38 images, 0 backgrounds, 0 corrupt: 100% 38/38 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:03<00:00,  1.25s/it]
+                   all         38        905       0.81      0.726      0.762      0.493
+                  ball         38         35      0.788      0.229      0.293     0.0589
+            goalkeeper         38         27      0.799      0.963      0.953       0.66
+                player         38        754      0.937      0.938      0.973      0.737
+               referee         38         89      0.716      0.775      0.828      0.515
+Speed: 2.1ms pre-process, 7.0ms inference, 0.0ms loss, 1.6ms post-process per image
+```
+8. Inference Model
+```sh
+%cd {HOME}
+!yolo task=detect mode=predict model={HOME}/runs/detect/train/weights/best.pt conf=0.25 source={dataset.location}/test/images save=True
+```
+- Let's take a look at few results.
+```sh
+import glob
+from IPython.display import Image, display
+
+for image_path in glob.glob(f'{HOME}/runs/detect/predict3/*.jpg')[:3]:
+      display(Image(filename=image_path, width=600))
+      print("\n")
+```
+## Deloy on Android Studio
 
 ## Reference
 ```sh
@@ -91,6 +126,7 @@ inproceedings{wang2021towards,
    year={2021}
 }
 ```
+[Paper link](https://arxiv.org/abs/2108.07020)
 ## License
 *The images and the corresponding annotations in PIDray Dataset can be used ONLY for academic purposes, NOT for commercial purposes.
 Copyright © 2021 Institute of Software Chinese Academy of Sciences, University of Chinese Academy of Sciences
