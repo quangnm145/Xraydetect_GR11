@@ -1,0 +1,8 @@
+train: C:\Users\QNN\Downloads\Yolov8custom\train
+val: C:\Users\QNN\Downloads\Yolov8custom\valid
+test: C:\Users\QNN\Downloads\Yolov8custom\test
+
+nc: 12
+
+names: ['Baton', 'HandCuffs', 'Knife', 'Lighter', 'Pliers', 'Hammer', 'Powerbank', 'Scissors', 'Wrench', 'Gun', 'Bullet', 'Sprayer']
+
