@@ -22,7 +22,8 @@ We use image rotation methods to increase the number of cases, then we divide al
   *Python 3.10.9 + CUDA 11.7 + Pytorch 1.13.1 + Torchvision 0.14.1 + Yolov8* 
 
 2. Dataset 
-  Roboflow: [Link1](https://universe.roboflow.com/hust-dz9h2/xraydetec4)
+- Google Drive: [Link](https://drive.google.com/file/d/1UMq0CP20lKcraOTvsFMjiLjPfDam9jAp/view)
+- Roboflow: [Link1](https://universe.roboflow.com/hust-dz9h2/xraydetec4)
             [Link2](https://universe.roboflow.com/hust-3xurl/xraydetec2)
             [Link3](https://universe.roboflow.com/bkhn-huqf2/xraydetec5)
             
@@ -32,7 +33,16 @@ We use image rotation methods to increase the number of cases, then we divide al
 !git clone https://github.com/quangnm145/Xraydetect_GR11.git
 %cd Xraydetect_GR11
 ```
-- Setup
+- Setup:
+<space><space>
+Let's make sure we have access to the GPU. We can use the nvidia-smi command to do that. In case of any issues, navigate to Edit -> Notebook Settings -> Hardware Accelerator, set it to GPU, and then click Save.
+
+```sh
+!nvidia-smi
+```
+![''](images/GPU.PNG) 
+
+YOLOv8 can be installed in two ways - from the source and via pip. This is because it is the first iteration of YOLO to have an official package.
 ```sh
 !pip install ultralytics==8.0.20
 from ultralytics import YOLO
