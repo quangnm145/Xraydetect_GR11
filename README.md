@@ -26,5 +26,9 @@ We use image rotation methods to increase the number of cases, then we divide al
             [Link2](https://universe.roboflow.com/hust-3xurl/xraydetec2)
             [Link3](https://universe.roboflow.com/bkhn-huqf2/xraydetec5)  
             [Link4](https://universe.roboflow.com/bkhn-3ppg8/xraydata6)
-
 3. Clone the repository:
+```sh
+conda create -n yolov8 python=3.10
+conda activate yolov8
+pip install ultralytics
+```
