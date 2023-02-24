@@ -27,12 +27,12 @@ We use image rotation methods to increase the number of cases, then we divide al
             [Link3](https://universe.roboflow.com/bkhn-huqf2/xraydetec5)
             
 3. Clone the repository:
--Clone:
+- Clone:
 ```sh
 !git clone https://github.com/quangnm145/Xraydetect_GR11.git
 %cd Xraydetect_GR11
 ```
--Setup
+- Setup
 ```sh
 !pip install ultralytics==8.0.20
 from ultralytics import YOLO
