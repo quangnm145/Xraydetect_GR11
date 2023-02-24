@@ -14,7 +14,8 @@ There are a total of 12 categories of prohibited items defined in the dataset, n
 ![''](images/image_samples.png) ![''](images/distribution.png)
 
 We use image rotation methods to increase the number of cases, then we divide all images into 53435 (about 75%) and 18,220 (25%) images respectively as training and test set . Also, according to the difficulty of forbidden item detection, we group the test set into three subsets, i.e. easy, hard and hidden. Specifically, easy mode means that the image in the test suite contains only one prohibited item. Hard mode indicates that the image in the test set contains more than one forbidden item. Stealth mode indicates that images in the test suite contain items that are intentionally hidden.
-![''](images/set.png) 
+
+![''](images/set.PNG) 
 
 # Usage
 1.Prerequisites:
