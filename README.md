@@ -46,3 +46,17 @@ print(HOME)
 ```sh
 !yolo task=detect mode=predict model=Xraydetect_GR11/module/best.pt conf=0.25 source=<Your_data>  save=True
 ```
+
+Result
+```sh
+%cd {HOME}
+Image(filename=f'{HOME}/runs/detect/train/confusion_matrix.png', width=600)
+```
+```sh
+%cd {HOME}
+Image(filename=f'{HOME}/runs/detect/train/results.png', width=600)
+```
+```sh
+%cd {HOME}
+Image(filename=f'{HOME}/runs/detect/train/val_batch0_pred.jpg', width=600)
+```
