@@ -35,7 +35,7 @@ We use image rotation methods to increase the number of cases, then we divide al
 ```
 - Setup:
 <space><space>
-Let's make sure that we have access to GPU. We can use nvidia-smi command to do that. In case of any problems navigate to Edit -> Notebook settings -> Hardware accelerator, set it to GPU, and then click Save.
+Let's make sure we have access to the GPU. We can use the nvidia-smi command to do that. In case of any issues, navigate to Edit -> Notebook Settings -> Hardware Accelerator, set it to GPU, and then click Save.
 
 ```sh
 !nvidia-smi
