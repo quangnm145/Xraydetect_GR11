@@ -1,12 +1,12 @@
 # Xraydetect_GR11
 
-# Overview
+## Overview
 
 Security inspection is a process of checking assets against set criteria and the evaluation of security systems and access controls to ensure safety, which is important to uncover any potential risks in various scenarios, such as public transportation and sensitive departments. In practice, the inspectors are required to monitor the scanned X-ray images acquired by the security inspection machine to uncover prohibited items, such as guns, ammunition, explosives, corrosive substances, toxic and radioactive substances. However, the inspectors struggle to localize prohibited items hidden in messy objects accurately and efficiently, which poses a great threat to safety.
 
 Towards the prohibited item detection in real-world scenarios, we present a large-scale benchmark, i.e., PIDray, which is formed by 47, 677 images in total. To the best of our knowledge, it is the largest X-ray prohibited item detection dataset to date.
 
-# Xray dataset
+## Xray dataset
 
 We compare the existing X-ray benchmarks as follows. “Total” and “Prohibited” indicate the number of total images and the images containing prohibited items in the dataset, respectively. C, O, and I represent Classification, Object Detection, and Instance Segmentation respectively. S, A, and R represent Subway, Airport, and Railway Station respectively.
 ![''](images/dataset_comparision.png)
@@ -17,7 +17,7 @@ We use image rotation methods to increase the number of cases, then we divide al
 
 ![''](images/set.PNG) 
 
-# Usage
+## Usage
 1.Prerequisites:
   *Python 3.10.9 + CUDA 11.7 + Pytorch 1.13.1 + Torchvision 0.14.1 + Yolov8* 
 
@@ -42,7 +42,15 @@ import os
 HOME = os.getcwd()
 print(HOME)
 ```
-4. Train 
+
+4.Pretrain:
+
+```sh
+%cd {HOME}
+!yolo task=detect mode=predict model=yolov8n.pt conf=0.25 source='https://media.roboflow.com/notebooks/examples/dog.jpeg' save=True
+```
+
+5. Train: 
 ```sh
 !yolo task=detect mode=predict model=Xraydetect_GR11/module/best.pt conf=0.25 source=<Your_data>  save=True
 ```
