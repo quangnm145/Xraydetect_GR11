@@ -1,0 +1,39 @@
+🔥Step 2— Building and running on Android Studio
+⭐Download ncnn-android-yolov8
+
+Download ncnn-android-yolov8 to your desktop
+(https://github.com/FeiGeChuanShu/ncnn-android-yolov8)
+
+⭐Download ncnn
+Download ncnn-YYYYMMDD-android-vulkan.zip
+(https://github.com/Tencent/ncnn/releases)
+
+Extract ncnn-YYYYMMDD-android-vulkan.zip into app/src/main/jni/
+Change the ncnn_DIR path to yours in app/src/main/jni/CMakeLists.txt
+
+⭐Download opencv-mobile
+Download opencv-mobile-XYZ-android.zip
+(https://github.com/nihui/opencv-mobile)
+
+Extract opencv-mobile-XYZ-android.zip into app/src/main/jni/
+Change the OpenCV_DIR path in app/src/main/jni/CMakeLists.txt
+
+⭐Opening ncnn-android-yolov8 with Android Studio
+💡 If there is a problem during the build, it should be a compatibility problem between NDK and CMake in SDK Tools. The modification method is as follows
+
+👉 ctrl +alt +s to open the setting, install version 21.3.6528147 of NDK
+
+👉 Install version 3.10.2.4988404 of CMake
+👉 Add CMake path in local.properties.
+👉 Press the button Sync project with Gradle Files in the upper right.
+
+⭐Placing NCNN Format Weights in Folder
+Placebest.bin and best.param in folderapp\src\main\assets\
+
+⭐Modifying yolo.cpp
+Modify app\src\main\jni\yolo.cpp's num_class according to your custom dataset.
+Modify app\src\main\jni\yolo.cpp's class_names according to your custom dataset.
+Modify app\src\main\jni\yolo.cpp's layer_name according to your best.param.
+Modify app\src\main\jni\yolo.cpp's weights name.
+
+Press the RUN button to execute the program successfully!
