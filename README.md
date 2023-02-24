@@ -100,6 +100,21 @@ val: Scanning /content/datasets/football-players-detection-1/valid/labels.cache.
                referee         38         89      0.716      0.775      0.828      0.515
 Speed: 2.1ms pre-process, 7.0ms inference, 0.0ms loss, 1.6ms post-process per image
 ```
+8. Inference Model
+```sh
+%cd {HOME}
+!yolo task=detect mode=predict model={HOME}/runs/detect/train/weights/best.pt conf=0.25 source={dataset.location}/test/images save=True
+```
+- Let's take a look at few results.
+```sh
+import glob
+from IPython.display import Image, display
+
+for image_path in glob.glob(f'{HOME}/runs/detect/predict3/*.jpg')[:3]:
+      display(Image(filename=image_path, width=600))
+      print("\n")
+```
+
 ## Reference
 ```sh
 inproceedings{wang2021towards,
