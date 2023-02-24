@@ -81,7 +81,25 @@ Image(filename=f'{HOME}/runs/detect/train/results.png', width=600)
 %cd {HOME}
 Image(filename=f'{HOME}/runs/detect/train/val_batch0_pred.jpg', width=600)
 ```
-
+7. Validate Model
+```sh
+%cd {HOME}
+!yolo task=detect mode=val model={HOME}/runs/detect/train/weights/best.pt data={dataset.location}/data.yaml
+```  
+```sh
+/content
+Ultralytics YOLOv8.0.9 🚀 Python-3.8.10 torch-1.13.1+cu116 CUDA:0 (Tesla T4, 15110MiB)
+Fusing layers... 
+Model summary: 168 layers, 11127132 parameters, 0 gradients, 28.4 GFLOPs
+val: Scanning /content/datasets/football-players-detection-1/valid/labels.cache... 38 images, 0 backgrounds, 0 corrupt: 100% 38/38 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:03<00:00,  1.25s/it]
+                   all         38        905       0.81      0.726      0.762      0.493
+                  ball         38         35      0.788      0.229      0.293     0.0589
+            goalkeeper         38         27      0.799      0.963      0.953       0.66
+                player         38        754      0.937      0.938      0.973      0.737
+               referee         38         89      0.716      0.775      0.828      0.515
+Speed: 2.1ms pre-process, 7.0ms inference, 0.0ms loss, 1.6ms post-process per image
+```
 ## Reference
 ```sh
 inproceedings{wang2021towards,
