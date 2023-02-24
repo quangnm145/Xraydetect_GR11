@@ -16,3 +16,13 @@ There are a total of 12 categories of prohibited items defined in the dataset, n
 We use image rotation methods to increase the number of cases, then we divide all images into 53435 (about 75%) and 18,220 (25%) images respectively as training and test set . Also, according to the difficulty of forbidden item detection, we group the test set into three subsets, i.e. easy, hard and hidden. Specifically, easy mode means that the image in the test suite contains only one prohibited item. Hard mode indicates that the image in the test set contains more than one forbidden item. Stealth mode indicates that images in the test suite contain items that are intentionally hidden.
 ![''](images/set.png) 
 
+# Usage
+1.Prerequisites:
+  *Python 3.10.9 + CUDA 11.7 + Pytorch 1.13.1 + Torchvision 0.14.1 + Yolov8* 
+
+2.Dataset 
+  Roboflow: [Link1](https://universe.roboflow.com/hust-dz9h2/xraydetec4)
+            [Link2](https://universe.roboflow.com/hust-3xurl/xraydetec2)
+            [Link3](https://universe.roboflow.com/bkhn-huqf2/xraydetec5)  
+            [Link4](https://universe.roboflow.com/bkhn-3ppg8/xraydata6)
+            [Link5](https://universe.roboflow.com/hust-gqdrz/xray7)
