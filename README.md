@@ -23,15 +23,8 @@ We use image rotation methods to increase the number of cases, then we divide al
 
 2.Dataset 
   Roboflow: [Link1](https://universe.roboflow.com/hust-dz9h2/xraydetec4)
-
             [Link2](https://universe.roboflow.com/hust-3xurl/xraydetec2)
-
             [Link3](https://universe.roboflow.com/bkhn-huqf2/xraydetec5)  
-
             [Link4](https://universe.roboflow.com/bkhn-3ppg8/xraydata6)
 
-            [Link5][def]
-            
 3. Clone the repository:
-
-[def]: https://universe.roboflow.com/hust-gqdrz/xray7
