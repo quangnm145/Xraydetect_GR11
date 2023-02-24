@@ -39,6 +39,8 @@ Let's make sure that we have access to GPU. We can use nvidia-smi command to do 
 !nvidia-smi
 ```
 ![''](images/GPU.PNG) 
+
+YOLOv8 can be installed in two ways - from the source and via pip. This is because it is the first iteration of YOLO to have an official package.
 ```sh
 !pip install ultralytics==8.0.20
 from ultralytics import YOLO
