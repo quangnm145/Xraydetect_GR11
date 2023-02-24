@@ -69,7 +69,7 @@ Image(filename=f'{HOME}/runs/detect/train/results.png', width=600)
 Image(filename=f'{HOME}/runs/detect/train/val_batch0_pred.jpg', width=600)
 ```
 
-## License
+## Reference
 ```sh
 inproceedings{wang2021towards,
    title={Towards Real-World Prohibited Item Detection: A Large-Scale X-ray Benchmark},
@@ -79,3 +79,7 @@ inproceedings{wang2021towards,
    year={2021}
 }
 ```
+## License
+*The images and the corresponding annotations in PIDray Dataset can be used ONLY for academic purposes, NOT for commercial purposes.
+Copyright © 2021 Institute of Software Chinese Academy of Sciences, University of Chinese Academy of Sciences
+All rights reserved.*
