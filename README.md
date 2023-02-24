@@ -92,6 +92,7 @@ inproceedings{wang2021towards,
    year={2021}
 }
 ```
+[Paper link](https://arxiv.org/abs/2108.07020.)
 ## License
 *The images and the corresponding annotations in PIDray Dataset can be used ONLY for academic purposes, NOT for commercial purposes.
 Copyright © 2021 Institute of Software Chinese Academy of Sciences, University of Chinese Academy of Sciences
