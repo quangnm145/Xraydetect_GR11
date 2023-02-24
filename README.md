@@ -114,6 +114,7 @@ for image_path in glob.glob(f'{HOME}/runs/detect/predict3/*.jpg')[:3]:
       display(Image(filename=image_path, width=600))
       print("\n")
 ```
+## Deloy on Android Studio
 
 ## Reference
 ```sh
