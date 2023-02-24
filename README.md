@@ -59,7 +59,9 @@ print(HOME)
 %cd {HOME}
 !yolo task=detect mode=predict model=yolov8n.pt conf=0.25 source='https://media.roboflow.com/notebooks/examples/dog.jpeg' save=True
 ```
-
+If you succeed the result will show
+![''](images/pre-train.png)
+ 
 5. Train: 
 ```sh
 !yolo task=detect mode=predict model=Xraydetect_GR11/module/best.pt conf=0.25 source=<Your_data>  save=True
