@@ -34,6 +34,11 @@ We use image rotation methods to increase the number of cases, then we divide al
 %cd Xraydetect_GR11
 ```
 - Setup
+Let's make sure that we have access to GPU. We can use nvidia-smi command to do that. In case of any problems navigate to Edit -> Notebook settings -> Hardware accelerator, set it to GPU, and then click Save.
+```sh
+!nvidia-smi
+```
+![''](images/GPU.PNG) 
 ```sh
 !pip install ultralytics==8.0.20
 from ultralytics import YOLO
