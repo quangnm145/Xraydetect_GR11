@@ -18,10 +18,10 @@ We use image rotation methods to increase the number of cases, then we divide al
 ![''](images/set.PNG) 
 
 ## Usage
-1.Prerequisites:
+1. Prerequisites:
   *Python 3.10.9 + CUDA 11.7 + Pytorch 1.13.1 + Torchvision 0.14.1 + Yolov8* 
 
-2.Dataset 
+2. Dataset 
   Roboflow: [Link1](https://universe.roboflow.com/hust-dz9h2/xraydetec4)
             [Link2](https://universe.roboflow.com/hust-3xurl/xraydetec2)
             [Link3](https://universe.roboflow.com/bkhn-huqf2/xraydetec5)
@@ -43,7 +43,7 @@ HOME = os.getcwd()
 print(HOME)
 ```
 
-4.Pretrain:
+4. Pretrain:
 
 ```sh
 %cd {HOME}
