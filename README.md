@@ -27,12 +27,22 @@ We use image rotation methods to increase the number of cases, then we divide al
             [Link3](https://universe.roboflow.com/bkhn-huqf2/xraydetec5)
             
 3. Clone the repository:
+-Clone:
 ```sh
-conda create -n yolov8 python=3.10
-conda activate yolov8
-pip install ultralytics
+!git clone https://github.com/quangnm145/Xraydetect_GR11.git
+%cd Xraydetect_GR11
+```
+-Setup
+```sh
+!pip install ultralytics==8.0.20
+from ultralytics import YOLO
+from IPython.display import display, Image
+
+import os
+HOME = os.getcwd()
+print(HOME)
 ```
 4. Train 
-'''sh
-!yolo task=detect mode=predict model= conf=0.25 source=<Your_data>  save=True
-'''
+```sh
+!yolo task=detect mode=predict model=Xraydetect_GR11/module/best.pt conf=0.25 source=<Your_data>  save=True
+```
