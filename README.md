@@ -68,3 +68,12 @@ Image(filename=f'{HOME}/runs/detect/train/results.png', width=600)
 %cd {HOME}
 Image(filename=f'{HOME}/runs/detect/train/val_batch0_pred.jpg', width=600)
 ```
+
+##License
+@inproceedings{wang2021towards,
+   title={Towards Real-World Prohibited Item Detection: A Large-Scale X-ray Benchmark},
+   author={Wang, Boying and Zhang, Libo and Wen, Longyin and Liu, Xianglong and Wu, Yanjun},
+   booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+   pages={5412--5421},
+   year={2021}
+}
